@@ -1,0 +1,69 @@
+/* basic styling */
+
+:root{
+    --bg-color:#000;
+    --tx-color:#000;
+    --bg-container:#fff;
+    --body-color:#ccc;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styling for the web page */
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    background-color: var(--body-color);
+    color: var(--tx-color);
+    display: flex;
+    margin-top: 15%;
+    justify-content: center;
+}
+
+/* styling for the box which contains the text */
+
+.container{
+    text-align: center;
+    background-color: var(--bg-container);
+    width: 300px;
+    height: 200px;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+/* since the text that have to change is in span so we have to set its font size */
+
+#text{
+    font-size: 50px;
+}
+
+/* text after the animation is applied */
+
+#text:after{
+    content: "";
+    animation: Change_text 2s linear infinite;
+}
+
+/* animation for text that has to change */
+
+@keyframes Change_text{
+    0%{
+        color: var(--bg-container);
+        background-color: rgb(47, 255, 92);
+        content: "Lifestyle";
+    }
+    50%{
+        color: var(--bg-container);
+        background-color: rgb(27, 6, 252);
+        content: "work";
+    }
+    100%{
+        color: var(--bg-container);
+        background-color: rgb(226, 37, 30);
+        content: "everything";
+    }
+}
